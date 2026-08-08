@@ -2,10 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --brand:#0b74ff;
+:root {
+  --brand-blue: #0b74ff;
+  --brand-orange: #ff7a00;
+  --brand-white: #ffffff;
 }
 
-body{
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   @apply bg-gray-50 text-gray-900;
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Better mobile touch experience */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+/* Smooth scrolling */
+* {
+  box-sizing: border-box;
+}
+
+/* Mobile screen */
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
 }

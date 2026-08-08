@@ -24,7 +24,7 @@ export function AuthProvider({ children }:{ children:React.ReactNode }){
     return ()=>unsub()
   },[])
 
-  return <AuthContext.Provider value={{ user, initializing }}>{children}</AuthContext.Provider>
+ return <AuthContext.Provider value={{ user, initializing }}>{children}</AuthContext.Provider>
 }
 
 export function useAuth(){
